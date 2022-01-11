@@ -1,4 +1,4 @@
-package com.example.DemoModel;
+package com.example.demo.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,9 +9,9 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name="User")
+@Table(name="users")
 
-public class User {
+public class User { 
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -24,17 +24,29 @@ public class User {
 	private String lastname;
 	
 	@Column(name="email_id")
-	private  String emailid;;
+	private String emailid;
+	
+	@Column(name="password")
+	private String password;
+	
+	@Column(name="address")
+	private String address;
+	
+	@Column(name="mobile_no")
+	private int mobileno;
+	
 	public User() {
 		// TODO Auto-generated constructor stub
 	}
 	
 	
-	public User(String firstname, String lastname, String emailid) {
+	public User(String firstname, String lastname, String emailid, String password, String address, int mobileno) {
 		super();
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.emailid = emailid;
+		this.address = address;
+		this.mobileno = mobileno;
 	}
 
 
@@ -53,7 +65,8 @@ public class User {
 	public String getLastname() {
 		return lastname;
 	}
-	public void setLastname(String lastname) {		this.lastname = lastname;
+	public void setLastname(String lastname) {		
+		this.lastname = lastname;
 	}
 	public String getEmailid() {
 		return emailid;
@@ -61,6 +74,23 @@ public class User {
 	public void setEmailid(String emailid) {
 		this.emailid = emailid;
 	}
-	
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public int getMobileno() {
+		return mobileno;
+	}
+	public void setMobileno(int mobileno) {
+		this.mobileno = mobileno;
+	}
 
 }
