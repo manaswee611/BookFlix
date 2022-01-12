@@ -29,24 +29,16 @@ public class User {
 	@Column(name="password")
 	private String password;
 	
-	@Column(name="address")
-	private String address;
-	
-	@Column(name="mobile_no")
-	private int mobileno;
-	
 	public User() {
 		// TODO Auto-generated constructor stub
 	}
 	
 	
-	public User(String firstname, String lastname, String emailid, String password, String address, int mobileno) {
+	public User(String firstname, String lastname, String emailid, String password) {
 		super();
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.emailid = emailid;
-		this.address = address;
-		this.mobileno = mobileno;
 	}
 
 
@@ -79,18 +71,6 @@ public class User {
 	}
 	public void setPassword(String password) {
 		this.password = password;
-	}
-	public String getAddress() {
-		return address;
-	}
-	public void setAddress(String address) {
-		this.address = address;
-	}
-	public int getMobileno() {
-		return mobileno;
-	}
-	public void setMobileno(int mobileno) {
-		this.mobileno = mobileno;
 	}
 
 }
