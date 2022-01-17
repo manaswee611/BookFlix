@@ -6,6 +6,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
 
 @Entity
@@ -23,9 +27,13 @@ public class User {
 	@Column(name="last_name")
 	private String lastname;
 	
+	
+	@Email
 	@Column(name="email_id")
 	private String emailid;
 	
+	@Size(max=12,min=3,message="mandatory with size between 3-12")
+	@Pattern(regexp = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).{8,20}$",message="Password must have length 8-20,characters between A-Z,a-z,digit contain 0-9 and any special character!!!") 
 	@Column(name="password")
 	private String password;
 	
