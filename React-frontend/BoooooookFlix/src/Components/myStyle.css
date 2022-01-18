@@ -1,0 +1,28 @@
+.footer{
+    bottom: 0px;
+    position: fixed;
+    height: 30px;
+}
+.navbar a{
+    text-decoration: none;
+    color:chartreuse;
+    margin-left: 200px;
+}
+.navbar-brand{
+    margin-left: 15px;
+    font-size: 25px;
+}
+.btn-primary{
+    float: right;
+    margin-right: 72px;
+}
+.row{
+    padding-top: 55px;
+}
+.btn-secondary{
+    float: right;
+    margin-right: 10px;
+}
+.btn-success{
+    margin-right: 15px;
+}
